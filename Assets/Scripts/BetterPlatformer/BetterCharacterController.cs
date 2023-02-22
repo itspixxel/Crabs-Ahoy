@@ -30,6 +30,14 @@ public class BetterCharacterController : MonoBehaviour
     protected Collider2D charCollision;
     protected Vector2 playerSize, boxSize;
 
+    private bool isJumping;
+
+    private float coyoteTime = 0.2f;
+    private float coyoteTimeCounter;
+
+    private float jumpBufferTime = 0.2f;
+    private float jumpBufferCounter;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -75,7 +83,7 @@ public class BetterCharacterController : MonoBehaviour
         }
 
         //Input for jumping ***Multi Jumping***
-        if (Input.GetButtonDown("Jump") && currentjumpCount > 1)
+        if (Input.GetButtonDown("Jump") && currentjumpCount >= maxJumps)
         {
             jumped = true;
             currentjumpCount--;
@@ -83,7 +91,7 @@ public class BetterCharacterController : MonoBehaviour
         }
 
         //Get Player input 
-        horizInput = Input.GetAxis("Horizontal");     
+        horizInput = Input.GetAxis("Horizontal");
     }
 
     // Flip Character Sprite
