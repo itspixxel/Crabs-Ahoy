@@ -904,7 +904,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -45, y: 4, z: 0}
+  - first: {x: -44, y: 4, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 3
@@ -914,7 +914,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -44, y: 4, z: 0}
+  - first: {x: -43, y: 4, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 4
@@ -924,7 +924,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -43, y: 4, z: 0}
+  - first: {x: -42, y: 4, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1759,12 +1759,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   jumpForce: 12
-  wallJumpForce: 8
-  wallJumpHorizontalForce: 4
+  wallJumpForce: 20
+  wallJumpHorizontalForce: 10
   groundCheck: {fileID: 716540224}
   wallCheck: {fileID: 418408616}
-  groundDistance: 0.2
-  wallDistance: 0.2
+  groundDistance: 0.1
+  wallDistance: 0.1
+  coyoteTime: 0.2
   groundMask:
     serializedVersion: 2
     m_Bits: 256

@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class HorizontalController : MonoBehaviour
 {
@@ -13,14 +11,14 @@ public class HorizontalController : MonoBehaviour
     public Transform wallCheck;
     public float groundDistance = 0.2f;
     public float wallDistance = 0.2f;
+    public float coyoteTime = 0.2f;
     public LayerMask groundMask;
 
     private Rigidbody2D rb;
     private bool isGrounded = false;
     private bool isTouchingWall = false;
     private bool isFacingRight = true;
-    private int jumpCount = 0;
-    private int maxJumps = 1;
+    private float coyoteTimeLeft = 0f;
 
     void Start()
     {
@@ -32,19 +30,17 @@ public class HorizontalController : MonoBehaviour
         // Check if the player has pressed the jump button
         if (Input.GetButtonDown("Jump"))
         {
-            if (isGrounded || jumpCount < maxJumps)
+            if (isGrounded)
             {
-                // Increment the jump count
-                jumpCount++;
-
-                // Set the y-velocity of the rigidbody to the jump force
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                Jump();
             }
-            else if (isTouchingWall && !isGrounded)
+            else if (isTouchingWall && !isGrounded && coyoteTimeLeft > 0)
             {
-                // Set the x and y velocity of the rigidbody to the wall jump force
-                float horizontalVelocity = isFacingRight ? -wallJumpHorizontalForce : wallJumpHorizontalForce;
-                rb.velocity = new Vector2(horizontalVelocity, wallJumpForce);
+                WallJump();
+            }
+            else if (!isGrounded && coyoteTimeLeft > 0)
+            {
+                Jump();
             }
         }
     }
@@ -55,12 +51,17 @@ public class HorizontalController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundDistance, groundMask);
 
         // Check if the character is touching a wall
-        isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallDistance, groundMask);
+        isTouchingWall = Physics2D.Raycast(wallCheck.position, isFacingRight ? Vector2.right : Vector2.left, wallDistance, groundMask);
 
         if (isGrounded)
         {
-            // Reset the jump count
-            jumpCount = 0;
+            // Reset Coyote Time
+            coyoteTimeLeft = coyoteTime;
+        }
+        else
+        {
+            // decrement coyote time
+            coyoteTimeLeft -= Time.deltaTime;
         }
 
         // Move the character
@@ -75,5 +76,23 @@ public class HorizontalController : MonoBehaviour
 
         // Flip the character's sprite based on its direction
         transform.localScale = new Vector3(isFacingRight ? 1 : -1, 1, 1);
+    }
+
+    void Dash()
+    {
+
+    }
+
+    void Jump()
+    {
+        // Set the y-velocity of the rigidbody to the jump force
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+    }
+
+    void WallJump()
+    {
+        // Set the x and y velocity of the rigidbody to the wall jump force
+        float horizontalVelocity = isFacingRight ? -wallJumpHorizontalForce : wallJumpHorizontalForce;
+        rb.velocity = new Vector2(horizontalVelocity, wallJumpForce);
     }
 }
