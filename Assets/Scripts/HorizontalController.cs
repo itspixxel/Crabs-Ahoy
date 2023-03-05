@@ -13,9 +13,9 @@ public class HorizontalController : MonoBehaviour
     public float wallDistance = 0.2f;
     public float coyoteTime = 0.2f;
     public LayerMask groundMask;
+    public bool isGrounded = false;
 
     private Rigidbody2D rb;
-    private bool isGrounded = false;
     private bool isTouchingWall = false;
     private bool isFacingRight = true;
     private float coyoteTimeLeft = 0f;
@@ -69,13 +69,13 @@ public class HorizontalController : MonoBehaviour
 
         // Check if the character has hit a tile and flip direction if necessary
         RaycastHit2D hit = Physics2D.Raycast(transform.position, isFacingRight ? Vector2.right : Vector2.left, 0.5f, groundMask);
-        if (hit.collider != null)
+        if (isTouchingWall)
         {
             isFacingRight = !isFacingRight;
         }
 
         // Flip the character's sprite based on its direction
-        transform.localScale = new Vector3(isFacingRight ? 1 : -1, 1, 1);
+        transform.localScale = new Vector3(isFacingRight ? -1 : 1, 1, 1);
     }
 
     void Dash()
@@ -85,14 +85,25 @@ public class HorizontalController : MonoBehaviour
 
     void Jump()
     {
-        // Set the y-velocity of the rigidbody to the jump force
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        if (isTouchingWall)
+        {
+            WallJump();
+        }
+        else
+        {
+            // Set the y-velocity of the rigidbody to the jump force
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
     }
 
     void WallJump()
     {
         // Set the x and y velocity of the rigidbody to the wall jump force
-        float horizontalVelocity = isFacingRight ? -wallJumpHorizontalForce : wallJumpHorizontalForce;
+        float horizontalVelocity = isTouchingWall && isFacingRight ? -wallJumpHorizontalForce : wallJumpHorizontalForce;
         rb.velocity = new Vector2(horizontalVelocity, wallJumpForce);
+
+        // Flip the character's direction based on the wall it is jumping off of
+        isFacingRight = isTouchingWall ? !isFacingRight : isFacingRight;
+        transform.localScale = new Vector3(isFacingRight ? 1 : -1, 1, 1);
     }
 }
