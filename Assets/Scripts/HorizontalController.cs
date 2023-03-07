@@ -16,13 +16,14 @@ public class HorizontalController : MonoBehaviour
     public bool isGrounded = false;
 
     private Rigidbody2D rb;
+    private BoxCollider2D groundLeaveCheck;
     private bool isTouchingWall = false;
     private bool isFacingRight = true;
     private float coyoteTimeLeft = 0f;
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        groundLeaveCheck = GetComponent<BoxCollider2D>();
     }
 
     void Update()
@@ -33,10 +34,6 @@ public class HorizontalController : MonoBehaviour
             if (isGrounded)
             {
                 Jump();
-            }
-            else if (isTouchingWall && !isGrounded && coyoteTimeLeft > 0)
-            {
-                WallJump();
             }
             else if (!isGrounded && coyoteTimeLeft > 0)
             {
@@ -68,7 +65,7 @@ public class HorizontalController : MonoBehaviour
         rb.velocity = new Vector2(moveSpeed * (isFacingRight ? 1 : -1), rb.velocity.y);
 
         // Check if the character has hit a tile and flip direction if necessary
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, isFacingRight ? Vector2.right : Vector2.left, 0.5f, groundMask);
+        //RaycastHit2D hit = Physics2D.Raycast(transform.position, isFacingRight ? Vector2.right : Vector2.left, 0.5f, groundMask);
         if (isTouchingWall)
         {
             isFacingRight = !isFacingRight;
@@ -78,9 +75,13 @@ public class HorizontalController : MonoBehaviour
         transform.localScale = new Vector3(isFacingRight ? -1 : 1, 1, 1);
     }
 
-    void Dash()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-
+        if (collision != null) 
+        {
+            Debug.Log("Collider Exited");
+            isFacingRight = !isFacingRight;
+        }
     }
 
     void Jump()
@@ -88,6 +89,7 @@ public class HorizontalController : MonoBehaviour
         if (isTouchingWall)
         {
             WallJump();
+            coyoteTimeLeft = coyoteTime;
         }
         else
         {
