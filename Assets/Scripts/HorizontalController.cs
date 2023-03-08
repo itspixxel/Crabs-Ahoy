@@ -18,8 +18,11 @@ public class HorizontalController : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D groundLeaveCheck;
     private bool isTouchingWall = false;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
     private float coyoteTimeLeft = 0f;
+
+    private bool isJumping = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -64,6 +67,12 @@ public class HorizontalController : MonoBehaviour
         // Move the character
         rb.velocity = new Vector2(moveSpeed * (isFacingRight ? 1 : -1), rb.velocity.y);
 
+        if(rb.velocity.y < 0 && isGrounded)
+        {
+            isJumping = false;
+        }
+
+
         // Check if the character has hit a tile and flip direction if necessary
         //RaycastHit2D hit = Physics2D.Raycast(transform.position, isFacingRight ? Vector2.right : Vector2.left, 0.5f, groundMask);
         if (isTouchingWall)
@@ -77,9 +86,12 @@ public class HorizontalController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision != null) 
+        if (isJumping)
+            return;
+
+        if (collision != null)
         {
-            Debug.Log("Collider Exited");
+            Debug.Log("Collider Exited: " + isFacingRight, this.gameObject);
             isFacingRight = !isFacingRight;
         }
     }
@@ -91,10 +103,17 @@ public class HorizontalController : MonoBehaviour
             WallJump();
             coyoteTimeLeft = coyoteTime;
         }
-        else
+        else if(!isJumping)
         {
+            //jumpCount++;
+
+            //the condition:
+            //if(jumpCount < 2)
+
             // Set the y-velocity of the rigidbody to the jump force
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            coyoteTimeLeft = 0.0f;
+            isJumping = true;
         }
     }
 
