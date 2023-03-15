@@ -82,11 +82,11 @@ public class HorizontalController : MonoBehaviour
             isFacingRight = !isFacingRight;
         }
 
-        //else if (isTouchingWall && !isGrounded)
-        //{
-        //    isFacingRight = !isFacingRight;
-        //    rb.AddForce((isFacingRight ? new Vector2(1,1) * wallJumpForce : new Vector2(-1, 1) * wallJumpForce), ForceMode2D.Impulse);
-        //}
+        else if (isTouchingWall && !isGrounded)
+        {
+            isFacingRight = !isFacingRight;
+            rb.AddForce((isFacingRight ? new Vector2(1, 1) * wallJumpForce : new Vector2(-1, 1) * wallJumpForce), ForceMode2D.Impulse);
+        }
 
         // Flip the character's sprite based on its direction
         transform.localScale = new Vector3(isFacingRight ? -1 : 1, 1, 1);
