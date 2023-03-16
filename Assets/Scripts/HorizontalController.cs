@@ -1,4 +1,6 @@
 using JetBrains.Annotations;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class HorizontalController : MonoBehaviour
@@ -50,6 +52,12 @@ public class HorizontalController : MonoBehaviour
             }
         }
 
+        // Check if the player has pressed the attack button (left click)
+        if (Input.GetMouseButtonDown(0))
+        {
+            StartCoroutine(WaitForAnimation(anim, "CrabbyAttackAnim"));
+        }
+
         anim.SetBool("Grounded", isGrounded);
 
         // Check if the character is on the ground
@@ -94,7 +102,6 @@ public class HorizontalController : MonoBehaviour
 
     void FixedUpdate()
     {
-
         // Move the character
         rb.velocity = new Vector2(moveSpeed * (isFacingRight ? 1 : -1), rb.velocity.y);
     }
@@ -109,6 +116,16 @@ public class HorizontalController : MonoBehaviour
             Debug.Log("Collider Exited: " + isFacingRight, this.gameObject);
             isFacingRight = !isFacingRight;
         }
+    }
+
+    IEnumerator WaitForAnimation(Animator animator, string animationName)
+    {
+        animator.SetBool("isAttacking", true);
+        animator.Play(animationName);
+
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        animator.SetBool("isAttacking", false);
     }
 
     void Jump()
