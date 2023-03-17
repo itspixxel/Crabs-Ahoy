@@ -45,17 +45,4 @@ public class Projectile : MonoBehaviour
             }
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            if (other.GetComponent<HealthController>() != null)
-            {
-                Debug.Log("Slay");
-                other.GetComponent<HealthController>().TakeDamage(damageAmount);
-                Destroy(gameObject);
-            }
-        }
-    }
 }
