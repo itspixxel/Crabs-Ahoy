@@ -9,7 +9,7 @@ public class HealthController : MonoBehaviour
 
     [SerializeField] private Image[] hearts;
 
-    private void Start()
+    private void Update()
     {
         UpdateHealth();
     }
@@ -27,5 +27,11 @@ public class HealthController : MonoBehaviour
                 hearts[i].color = Color.black;
             }
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        playerHealth -= damage;
+        UpdateHealth();
     }
 }

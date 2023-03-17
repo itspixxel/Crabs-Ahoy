@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6990297579544071231}
   m_Layer: 0
   m_Name: CannonBallLeft
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: -1, y: 0}
   speed: 5
-  groundMask: {fileID: 0}
+  damageAmount: 1
 --- !u!50 &6990297579544071231
 Rigidbody2D:
   serializedVersion: 4

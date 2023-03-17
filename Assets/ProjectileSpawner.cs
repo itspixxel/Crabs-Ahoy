@@ -42,7 +42,7 @@ public class ProjectileSpawner : MonoBehaviour
         anim.SetBool("isFiring", false);
 
         // Spawn the projectile
-        GameObject projectile = Instantiate(projectilePrefab, spawnPosition.position, spawnPosition.rotation);
+        SpawnProjectile();
     }
 
 

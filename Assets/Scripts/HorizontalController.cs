@@ -2,6 +2,8 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class HorizontalController : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class HorizontalController : MonoBehaviour
     public float wallJumpHorizontalForce = 4f;
     public Transform groundCheck;
     public Transform wallCheck;
+    public Transform LevelStartPos;
     public float groundDistance = 0.2f;
     public float wallDistance = 0.2f;
     public float coyoteTime = 0.2f;
@@ -52,10 +55,10 @@ public class HorizontalController : MonoBehaviour
             }
         }
 
-        // Check if the player has pressed the attack button (left click)
-        if (Input.GetMouseButtonDown(0))
+        // Restart Level on pressing R
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            StartCoroutine(WaitForAnimation(anim, "CrabbyAttackAnim"));
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         anim.SetBool("Grounded", isGrounded);
@@ -111,7 +114,7 @@ public class HorizontalController : MonoBehaviour
         if (isJumping)
             return;
 
-        if (collision != null)
+        if (collision != null && collision.gameObject.layer == LayerMask.NameToLayer("Level"))
         {
             Debug.Log("Collider Exited: " + isFacingRight, this.gameObject);
             isFacingRight = !isFacingRight;

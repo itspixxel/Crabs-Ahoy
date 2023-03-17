@@ -7,8 +7,10 @@ public class Projectile : MonoBehaviour
 {
     public Vector2 direction; // The direction for the projectile to move in
     public float speed = 5f; // The speed at which the projectile moves
+    public int damageAmount;
 
     private Rigidbody2D rb; // The projectile's rigidbody component
+    private HealthController healthController;
 
     void Start()
     {
@@ -22,9 +24,9 @@ public class Projectile : MonoBehaviour
         transform.position = new Vector2(transform.position.x + move.x * Time.deltaTime, transform.position.y + move.y * Time.deltaTime);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag != "Projectile")
+        if (collision.gameObject.tag != "Projectile" && collision.gameObject.tag != "Player")
         {
             // Destroy the projectile gameobject
             Destroy(gameObject);
@@ -32,6 +34,28 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.name == "Level")
         {
             Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "Player")
+        {
+            if (collision.gameObject.GetComponent<HealthController>() != null)
+            {
+                Debug.Log("Slay");
+                collision.gameObject.GetComponent<HealthController>().TakeDamage(damageAmount);
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (other.GetComponent<HealthController>() != null)
+            {
+                Debug.Log("Slay");
+                other.GetComponent<HealthController>().TakeDamage(damageAmount);
+                Destroy(gameObject);
+            }
         }
     }
 }
