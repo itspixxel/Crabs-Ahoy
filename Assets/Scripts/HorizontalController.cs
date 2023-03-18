@@ -17,6 +17,7 @@ public class HorizontalController : MonoBehaviour
     public float groundDistance = 0.2f;
     public float wallDistance = 0.2f;
     public float coyoteTime = 0.2f;
+    public int wallJumpCount;
     public LayerMask groundMask;
     public bool isGrounded = false;
 
@@ -73,6 +74,9 @@ public class HorizontalController : MonoBehaviour
         {
             // Reset Coyote Time
             coyoteTimeLeft = coyoteTime;
+
+            // Reset Wall Jump Count
+            wallJumpCount = 0;
         }
         else
         {
@@ -93,10 +97,11 @@ public class HorizontalController : MonoBehaviour
             isFacingRight = !isFacingRight;
         }
 
-        else if (isTouchingWall && !isGrounded)
+        else if (isTouchingWall && !isGrounded && wallJumpCount <= 2)
         {
             isFacingRight = !isFacingRight;
             rb.AddForce((isFacingRight ? new Vector2(1, 1) * wallJumpForce : new Vector2(-1, 1) * wallJumpForce), ForceMode2D.Impulse);
+            wallJumpCount++;
         }
 
         // Flip the character's sprite based on its direction
