@@ -103,7 +103,6 @@ public class HorizontalController : MonoBehaviour
 
         if (collision != null && collision.gameObject.layer == LayerMask.NameToLayer("Level"))
         {
-            Debug.Log("Collider Exited: " + isFacingRight, this.gameObject);
             isFacingRight = !isFacingRight;
         }
     }

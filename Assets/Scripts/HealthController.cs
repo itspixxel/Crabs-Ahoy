@@ -10,6 +10,8 @@ public class HealthController : MonoBehaviour
     private Animator anim;
     public AudioSource hitSoundEffect;
 
+    public int maxHealth = 6;
+
     [SerializeField] private GameObject GameOverUI;
 
     [SerializeField] private Image[] hearts;
@@ -62,6 +64,7 @@ public class HealthController : MonoBehaviour
             GameOverUI.SetActive(true);
             GameObject.Find("Character").GetComponent<HorizontalController>().enabled = false;
             GameObject.Find("Character").GetComponent<Rigidbody2D>().velocity.Set(0.0f, 0.0f);
+            GameObject.Find("BG Music").GetComponent<AudioSource>().pitch = 0.5f;
             StartCoroutine(RestartGame());
         }
         else
