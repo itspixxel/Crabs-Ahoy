@@ -8,6 +8,9 @@ public class HealthController : MonoBehaviour
 {
     public int playerHealth;
     private Animator anim;
+    public AudioSource hitSoundEffect;
+
+    [SerializeField] private GameObject GameOverUI;
 
     [SerializeField] private Image[] hearts;
 
@@ -18,6 +21,7 @@ public class HealthController : MonoBehaviour
 
     private void Update()
     {
+        isAlive();
         UpdateHealth();
     }
 
@@ -25,7 +29,7 @@ public class HealthController : MonoBehaviour
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            if(i < playerHealth)
+            if (i < playerHealth)
             {
                 hearts[i].color = Color.white;
             }
@@ -50,23 +54,26 @@ public class HealthController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        hitSoundEffect.Play();
         playerHealth -= damage;
         UpdateHealth();
         if (!isAlive())
         {
-            SceneManager.LoadScene(0);
-            //anim.SetBool("isAlive", false);
-            //// Disable player movement or any other scripts that shouldn't run during death animation
-            //StartCoroutine(LoadSceneAfterAnimation());
+            GameOverUI.SetActive(true);
+            GameObject.Find("Character").GetComponent<HorizontalController>().enabled = false;
+            GameObject.Find("Character").GetComponent<Rigidbody2D>().velocity.Set(0.0f, 0.0f);
+            StartCoroutine(RestartGame());
+        }
+        else
+        {
+            GameOverUI.SetActive(false);
         }
     }
 
-    //IEnumerator LoadSceneAfterAnimation()
-    //{
-    //    // Wait for the death animation to finish playing
-    //    yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+    IEnumerator RestartGame()
+    {
+        yield return new WaitForSeconds(3f);
 
-    //    // Load the scene with build index 0
-    //    SceneManager.LoadScene(0);
-    //}
+        SceneManager.LoadScene(0);
+    }
 }

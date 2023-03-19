@@ -7,6 +7,7 @@ public class CoinCollect : MonoBehaviour
 {
     public int coins;
     public TextMeshProUGUI coinsText;
+    [SerializeField] private AudioSource collectSound;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,6 +15,7 @@ public class CoinCollect : MonoBehaviour
         {
             coins++;
             coinsText.text = coins.ToString();
+            collectSound.Play();
             Destroy(collision.gameObject);
         }
     }

@@ -16,17 +16,17 @@ public class HorizontalController : MonoBehaviour
     public Transform LevelStartPos;
     public float groundDistance = 0.2f;
     public float wallDistance = 0.2f;
-    public float coyoteTime = 0.2f;
     public int wallJumpCount;
     public LayerMask groundMask;
     public bool isGrounded = false;
 
-    private Rigidbody2D rb;
+    public AudioSource jumpSoundEffect;
+
+    public Rigidbody2D rb;
     private Animator anim;
     private BoxCollider2D groundLeaveCheck;
     private bool isTouchingWall = false;
     public bool isFacingRight = true;
-    private float coyoteTimeLeft = 0f;
 
     private bool isJumping = false;
 
@@ -46,20 +46,10 @@ public class HorizontalController : MonoBehaviour
             {
                 Jump();
             }
-            else if (!isGrounded && coyoteTimeLeft > 0)
-            {
-                Jump();
-            }
             if (!isGrounded && isTouchingWall)
             {
                 WallJump();
             }
-        }
-
-        // Restart Level on pressing R
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         anim.SetBool("Grounded", isGrounded);
@@ -72,16 +62,8 @@ public class HorizontalController : MonoBehaviour
 
         if (isGrounded)
         {
-            // Reset Coyote Time
-            coyoteTimeLeft = coyoteTime;
-
             // Reset Wall Jump Count
             wallJumpCount = 0;
-        }
-        else
-        {
-            // decrement coyote time
-            coyoteTimeLeft -= Time.deltaTime;
         }
 
         if (rb.velocity.y < 0 && isGrounded)
@@ -126,22 +108,12 @@ public class HorizontalController : MonoBehaviour
         }
     }
 
-    IEnumerator WaitForAnimation(Animator animator, string animationName)
-    {
-        animator.SetBool("isAttacking", true);
-        animator.Play(animationName);
-
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-
-        animator.SetBool("isAttacking", false);
-    }
-
     void Jump()
     {
         if (isTouchingWall && isGrounded)
         {
+            jumpSoundEffect.Play();
             WallJump();
-            coyoteTimeLeft = coyoteTime;
         }
         else if(!isJumping)
         {
@@ -151,8 +123,8 @@ public class HorizontalController : MonoBehaviour
             //if(jumpCount < 2)
 
             // Set the y-velocity of the rigidbody to the jump force
+            jumpSoundEffect.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            coyoteTimeLeft = 0.0f;
             isJumping = true;
         }
     }

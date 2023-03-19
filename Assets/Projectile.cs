@@ -41,8 +41,8 @@ public class Projectile : MonoBehaviour
             if (collision.gameObject.GetComponent<HealthController>() != null)
             {
                 Debug.Log("Slay");
-                collision.gameObject.GetComponent<HealthController>().TakeDamage(damageAmount);
                 Destroy(gameObject);
+                collision.gameObject.GetComponent<HealthController>().TakeDamage(damageAmount);
             }
         }
     }

@@ -21,8 +21,6 @@ public class SpikeTrap : MonoBehaviour
 
                 // Reset player to start
                 collision.gameObject.transform.position = LevelStartPos.position;
-
-                collision.gameObject.GetComponent<HorizontalController>().isGrounded = true;
             }
         }
     }
