@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Moving Platform
+  - Projectile
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -13,12 +15,12 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Projectile
   - Level
   - Character
   - Enemy
   - Recharge
-  - 
+  - Spikes
   - 
   - 
   - 
