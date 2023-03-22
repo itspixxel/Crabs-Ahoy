@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BackgroundSprites
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: b800c9fe9d458b043a1b74b34cf1bc4d, type: 3}
+    - {fileID: 2800000, guid: e93b4ba6d6c5835418d265b3285d7630, type: 3}
+    - {fileID: 2800000, guid: 21bdb76bfab1a9042a18fdf1bb22ac9e, type: 3}
+    - {fileID: 2800000, guid: a49ef0195291edf4b82fa7d81fef5eed, type: 3}
+    - {fileID: 2800000, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 239283540, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 1827575487, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -763192735, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1002269665, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 1293602856, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1141057523, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1643950708, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 292931069, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -2014348295, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1705846545, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 400044133, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1308614133, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 1099835554, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -2046931993, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1720907300, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 2066217769, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 136993905, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1979327193, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 1913360113, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -284809887, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -957119179, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1023056720, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -912906313, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -46967813, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -753477928, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -280152427, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 371885969, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 1394850740, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 1865400989, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 135246557, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 1418169253, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -235670313, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 2108438556, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1858887763, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 1760989165, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1334235508, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -229917387, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 1427913967, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1562601674, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -2020291479, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1347611270, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 1435233761, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1961872354, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1410608403, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -81595726, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -26804447, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: -1724932315, guid: 0a7b469299ffd30408334c2201891288, type: 3}
+  - {fileID: 21300000, guid: e93b4ba6d6c5835418d265b3285d7630, type: 3}
+  - {fileID: 21300000, guid: a49ef0195291edf4b82fa7d81fef5eed, type: 3}
+  - {fileID: 21300000, guid: 21bdb76bfab1a9042a18fdf1bb22ac9e, type: 3}
+  - {fileID: 21300000, guid: b800c9fe9d458b043a1b74b34cf1bc4d, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Terrain (32x32)_40
+  - Terrain (32x32)_41
+  - Terrain (32x32)_42
+  - Terrain (32x32)_22
+  - Terrain (32x32)_43
+  - Terrain (32x32)_23
+  - Terrain (32x32)_44
+  - Terrain (32x32)_20
+  - Terrain (32x32)_45
+  - Terrain (32x32)_21
+  - Terrain (32x32)_35
+  - Terrain (32x32)_46
+  - Terrain (32x32)_26
+  - Terrain (32x32)_34
+  - Terrain (32x32)_27
+  - Terrain (32x32)_37
+  - Terrain (32x32)_24
+  - Terrain (32x32)_36
+  - Terrain (32x32)_25
+  - Terrain (32x32)_31
+  - Terrain (32x32)_30
+  - Terrain (32x32)_33
+  - Terrain (32x32)_28
+  - Terrain (32x32)_32
+  - Terrain (32x32)_29
+  - Terrain (32x32)_39
+  - Terrain (32x32)_38
+  - Terrain (32x32)_4
+  - Terrain (32x32)_5
+  - Terrain (32x32)_6
+  - Terrain (32x32)_7
+  - Terrain (32x32)_0
+  - Terrain (32x32)_1
+  - Terrain (32x32)_2
+  - Terrain (32x32)_3
+  - Terrain (32x32)_8
+  - Terrain (32x32)_9
+  - Terrain (32x32)_19
+  - Terrain (32x32)_18
+  - Terrain (32x32)_17
+  - Terrain (32x32)_16
+  - Terrain (32x32)_15
+  - Terrain (32x32)_14
+  - Terrain (32x32)_13
+  - Terrain (32x32)_12
+  - Terrain (32x32)_11
+  - Terrain (32x32)_10
+  - HalfPlatformRight
+  - Platform6x
+  - Platform
+  - HalfPlatformLeft
+  m_RenderDataMap: {}
+  m_Tag: BackgroundSprites
+  m_IsVariant: 0

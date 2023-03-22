@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BackgroundPalmTrees
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 80bde7ad332233d4583bda03a703785c, type: 3}
+    - {fileID: 2800000, guid: 17f0e887a07c9ba49af09ead5fcaa003, type: 3}
+    - {fileID: 2800000, guid: eaa09ee432ca72f44b64d62defcdece8, type: 3}
+    - {fileID: 2800000, guid: ddb2a40f6ec5d3f4091ea5c497b153fb, type: 3}
+    - {fileID: 2800000, guid: e5167e7c78fcb634e8df5f43951dab4f, type: 3}
+    - {fileID: 2800000, guid: ad34f04eca0c9df4ba5a0076a03bc1e7, type: 3}
+    - {fileID: 2800000, guid: 9bf6ed8770aab2d45a1d0ce46fc27b25, type: 3}
+    - {fileID: 2800000, guid: 1e112ce197c7727469918f74cc2b1707, type: 3}
+    - {fileID: 2800000, guid: 5c2b939ccb4c9a0469fafda98170b571, type: 3}
+    - {fileID: 2800000, guid: f29638d83e86207418ea7501521700ed, type: 3}
+    - {fileID: 2800000, guid: f4fd36589178fca4da41aa2048945b07, type: 3}
+    - {fileID: 2800000, guid: f351cb743e949a7429bffe67541611dc, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 1e112ce197c7727469918f74cc2b1707, type: 3}
+  - {fileID: 21300000, guid: f351cb743e949a7429bffe67541611dc, type: 3}
+  - {fileID: 21300000, guid: eaa09ee432ca72f44b64d62defcdece8, type: 3}
+  - {fileID: 21300000, guid: 17f0e887a07c9ba49af09ead5fcaa003, type: 3}
+  - {fileID: 21300000, guid: 9bf6ed8770aab2d45a1d0ce46fc27b25, type: 3}
+  - {fileID: 21300000, guid: f4fd36589178fca4da41aa2048945b07, type: 3}
+  - {fileID: 21300000, guid: f29638d83e86207418ea7501521700ed, type: 3}
+  - {fileID: 21300000, guid: e5167e7c78fcb634e8df5f43951dab4f, type: 3}
+  - {fileID: 21300000, guid: 5c2b939ccb4c9a0469fafda98170b571, type: 3}
+  - {fileID: 21300000, guid: 80bde7ad332233d4583bda03a703785c, type: 3}
+  - {fileID: 21300000, guid: ad34f04eca0c9df4ba5a0076a03bc1e7, type: 3}
+  - {fileID: 21300000, guid: ddb2a40f6ec5d3f4091ea5c497b153fb, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Back Palm Tree Regular 04
+  - Back Palm Tree Right 04
+  - Back Palm Tree Left 03
+  - Back Palm Tree Left 02
+  - Back Palm Tree Regular 03
+  - Back Palm Tree Right 03
+  - Back Palm Tree Right 02
+  - Back Palm Tree Regular 01
+  - Back Palm Tree Right 01
+  - Back Palm Tree Left 01
+  - Back Palm Tree Regular 02
+  - Back Palm Tree Left 04
+  m_RenderDataMap: {}
+  m_Tag: BackgroundPalmTrees
+  m_IsVariant: 0
