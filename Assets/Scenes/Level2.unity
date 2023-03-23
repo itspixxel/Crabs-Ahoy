@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &12480823
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &15680754
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &45483264
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &57842399
@@ -650,7 +650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &72222480
@@ -1399,7 +1399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &212041199
@@ -1587,7 +1587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &280638955
@@ -1999,7 +1999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &339939458
@@ -2183,7 +2183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &430598525
@@ -2283,7 +2283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &468517901
@@ -2591,7 +2591,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7772877, y: 1}
+    m_SensorSize: {x: 1.7788779, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2829,7 +2829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &618391546
@@ -3133,7 +3133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &656093459
@@ -3264,7 +3264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &736318667
@@ -3658,7 +3658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &905379828
@@ -4047,7 +4047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &1007592833
@@ -4147,7 +4147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &1011995973
@@ -4328,7 +4328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &1018450541
@@ -4428,7 +4428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &1027809044
@@ -4534,7 +4534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &1040193344
@@ -5024,7 +5024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &1159364406
@@ -5130,7 +5130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &1192302938
@@ -5387,7 +5387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &1261044685
@@ -5568,7 +5568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &1294100402
@@ -5775,7 +5775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &1382692005
@@ -26072,7 +26072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &1608770447
@@ -26178,7 +26178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &1623268248
@@ -26278,7 +26278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &1623713986
@@ -29125,7 +29125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35b71708b6e5664499efb44e7611247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
+  moveSpeed: 0.006
   endPos: {fileID: 746732215}
   startPos: {fileID: 1958666813}
 --- !u!212 &1884036494
