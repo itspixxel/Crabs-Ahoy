@@ -21,4 +21,4 @@ Problem solving and understanding of the C++ programming language and object ori
 - Best coding practices that will be used throughout my career in the industry.
 
 <h2>Project status</h2>
-<div><img src="https://progress-bar.dev/95"></div>
+<div><img src="https://progress-bar.dev/100"></div>
