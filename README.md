@@ -29,7 +29,7 @@ By attaching a projectile spawner script to different types of shooting enemies 
 The player starts off with 6 hearts, the health system listens out for every time the player takes damage and then sets the color of the last item in the array of hearts to black and the health to 1 less. When the player's health hits 0, the player is sent back to level 1 to start all over again (the game loop).
 
 7. Collectibles: 
-     a. Hearts: The player can collect hearts only if the player has taken damage (otherwise the heart isn't picked up)image.png.a99e1cc60eeee4fd6c9766429768e16b.png
+     a. Hearts: The player can collect hearts only if the player has taken damage (otherwise the heart isn't picked up)
      b. Coins: Coins are scattered throughout the levels for the player to collect which are then added to a variable that keeps track of the coins the player has collected in the level and displays it on the HUD.
 
 8. Levels: I have implemented 2 different and unique levels that transition seamlessly when the player reached the end of a level. If the player reaches the last level as defined in the Build Settings for the game then the game shows the game won screen and the player is told to exit the game by pressing Q.
