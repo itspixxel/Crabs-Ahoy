@@ -1,4 +1,4 @@
-<div align="center"><img src="https://github.com/itspixxel/RGP_Platformer/blob/maple/Assets/UI/CrabsAhoyIcon.png" width=80></div>
+<div align="center"><img src="https://github.com/itspixxel/RGP_Platformer/blob/amethyst/Assets/UI/CrabsAhoyIcon.png" width=80></div>
 <h1 align="center">Sarthak (Pixx) Sachdeva</h1>
 <p align="center"><strong>Crabs Ahoy</strong>
 <br><em>2D platformer made with Unity!</em></p>
